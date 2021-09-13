@@ -15,7 +15,6 @@ export const MainNavigation = () => {
       <Navbar />
       <Layout className='site-layout' style={{background: "#fff", color: "black"}}>
         <HeaderPage />
-        {/* <Header className='site-layout-background' style={{padding: 0}} /> */}
         <Content style={{margin: "0 16px"}}>
           <Route path={ROUTER.overView} exact component={HomeScreen} />
           <Route path={ROUTER.products} exact component={ProductsScreen} />

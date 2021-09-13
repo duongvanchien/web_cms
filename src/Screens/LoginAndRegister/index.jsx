@@ -1,20 +1,24 @@
-import React, {useState} from "react";
-import {useHistory} from "react-router-dom";
-import {MODAL, ROUTER} from "../../Contant";
-import {LoginModal} from "./components/LoginModal";
-import {RegisterModal} from "./components/RegisterModal";
-import {useSnackbar} from "notistack";
+import { useSnackbar } from "notistack";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { MODAL, ROUTER } from "../../Contant";
+import { login } from "../../Redux/slices/userSlice";
+import { LoginModal } from "./components/LoginModal";
+import { RegisterModal } from "./components/RegisterModal";
 
 export const LoginAndRegisterScreen = () => {
   const history = useHistory();
   const {enqueueSnackbar} = useSnackbar();
   const [modal, setModal] = useState(MODAL.login);
+  const dispatch = useDispatch();
 
   const handleChangeModalType = (modalType) => {
     setModal(modalType);
   };
 
   const handleLogin = async (data) => {
+    dispatch(login(data));
     history.push(ROUTER.overView);
   };
 

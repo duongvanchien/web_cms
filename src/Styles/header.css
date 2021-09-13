@@ -1,9 +1,7 @@
-.site-layout-avatar {
-  text-align: end;
-}
 .header-avatar {
   display: block;
   margin-right: 16px;
+  float: right;
 }
 .ant-avatar {
   cursor: pointer;

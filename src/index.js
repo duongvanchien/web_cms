@@ -5,12 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "antd/dist/antd.css";
 import {SnackbarProvider} from "notistack";
+import {store} from "./Redux/store";
+import {Provider} from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SnackbarProvider maxSnack={3}>
-      <App />
-    </SnackbarProvider>
+    <Provider store={store}>
+      <SnackbarProvider maxSnack={3}>
+        <App />
+      </SnackbarProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
