@@ -1,0 +1,11 @@
+.register_link {
+  cursor: pointer;
+  color: red;
+}
+.register_link:hover {
+  color: blue;
+}
+
+.styles_react-code-input-container__tpiKG {
+  margin: auto !important;
+}

@@ -1,0 +1,22 @@
+.site-layout-avatar {
+  text-align: end;
+}
+.header-avatar {
+  display: block;
+  margin-right: 16px;
+}
+.ant-avatar {
+  cursor: pointer;
+}
+.ant-layout-header {
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px !important;
+}
+
+.file-name-modal {
+  font-weight: 700;
+}
+
+.upload-avatar-user > .ant-upload-picture-card-wrapper {
+  width: 102px !important;
+  height: 102px !important;
+}
